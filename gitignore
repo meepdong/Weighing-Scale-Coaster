@@ -1,0 +1,20 @@
+    # KiCad temporary files
+    *.bak
+    *.bck
+    *.log
+    *.rpt
+    *.dcm
+    *.lib-bkp
+    *.pro-bkp
+    *.kicad_pro-bkp
+    *.kicad_sch-bak
+    *.kicad_pcb-bak
+
+    # Output files (Gerbers, BOMs, etc.)
+    /gerbers/
+    /bom/
+    *.gbr
+    *.drl
+    *.pos
+    *.pdf
+    *.csv
