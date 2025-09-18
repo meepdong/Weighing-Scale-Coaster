@@ -1,5 +1,6 @@
 # Weighing Scale Coaster
 A precision coffee scale built around the HX711 load cell amplifier, optimized for responsiveness and stability. Designed for baristas, tinkerers, and embedded engineers who care about both performance and personality.
+
 ![Weighing Scale Coaster](https://github.com/meepdong/Weighing-Scale-Coaster/blob/master/Renderv1.jpg)
 ## Features
 • 	HX711-based load cell interface with high-resolution weight readings
