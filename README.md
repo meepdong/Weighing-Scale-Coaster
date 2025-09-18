@@ -70,3 +70,10 @@ Future Improvements
 Credits
 Built by Maurice D'Moss, mechanical product design engineer with a passion for coffee and embedded systems.
 Filtering architecture inspired by Analog Devices' weigh scale reference design.
+
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+You are free to use, modify, and share this project for personal and educational purposes.  
+Commercial use is not permitted without explicit permission from the author.
