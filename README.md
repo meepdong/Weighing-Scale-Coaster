@@ -3,23 +3,32 @@ A precision coffee scale built around the HX711 load cell amplifier, optimized f
 ![Weighing Scale Coaster](renderv1.jpg)
 ## Features
 • 	HX711-based load cell interface with high-resolution weight readings
+
 • 	Reference-inspired filtering pipeline adapted from Analog Devices' weigh scale design
+
 • 	OLED display with expressive dome-shaped eyes and smile animation
+
 • 	Timer with short press toggle and long press reset
+
 • 	Flicker-free weight display using hysteresis and trimmed averaging
+
 • 	Designed for both Raspberry Pi Pico W and Seeed Studio XIAO ESP32-C6
 
 ## Hardware Overview
 ### Components
 • 	HX711 Load Cell Amplifier
+
 • 	5 kg Load Cell
+
 • 	SSD1306 OLED Display (128×32)
-• 	Two momentary push buttons (Tare + Timer)
+
+• 	Two momentary push buttons (Tare + Timer) . To be replaced with capacitive touch 
+
 • 	Microcontroller: Raspberry Pi Pico W or Seeed Studio XIAO ESP32-C6
 
 ## Wiring Table
 
-| Signal        | Pin on HX711 | Pin on Pico W | Pin on XIAO ESP32-C6 |
+| Pin on OLED       | Pin on HX711 | Pin on Pico W | Pin on XIAO ESP32-C6 |
 |---------------|--------------|----------------|----------------------|
 | VCC           | VCC          | 3.3V           | 3.3V                 |
 | GND           | GND          | GND            | GND                  |    
@@ -33,12 +42,18 @@ A precision coffee scale built around the HX711 load cell amplifier, optimized f
 ## Load Cell Algorithm
 This project adapts the signal processing architecture from Analog Devices' weigh scale reference design to the HX711.
 Filtering Pipeline
+
 • 	Trimmed Moving Average: Removes min/max outliers from a rolling window to suppress noise while preserving step response.
+
 • 	Step Detection: Detects real weight changes using dual-threshold logic and pre-fills the filter buffer to skip lag.
+
 • 	Display Hysteresis: Prevents flicker by suppressing small changes below a threshold.
-Why It Works
+
+### Why It Works
 • 	HX711 is a 24-bit sigma-delta ADC with built-in gain and ratiometric measurement.
+
 • 	Filtering compensates for its limited noise-free resolution and slow sample rate.
+
 • 	The result: smooth, stable, and responsive weight readings even with low-cost hardware.
 
 ## User Interaction
@@ -47,8 +62,10 @@ OLED shows timer and weight. Startup animation includes blinking eyes and a smil
 
 Future Improvements
 • 	Calibration helper script for computing 
+
 • 	BLE or Wi-Fi integration for remote brew tracking
-• 	Capacitive touch or rotary encoder input
+
+• 	Capacitive touch buttons
 
 Credits
 Built by Maurice D'Moss, mechanical product design engineer with a passion for coffee and embedded systems.
